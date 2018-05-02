@@ -1,0 +1,17 @@
+1.环境搭建，直接用idea创建工程，自动生成配置文件，启动类和maven依赖
+2.热部署，添加dev-tools和build plugin
+3.多环境切换，添加application-xx文件
+4.日志配置，使用logback-spring.xml文件制定多个环境
+5.打包，默认使用jar包即可
+6.整合web模板引擎freemarker或Thymeleaf
+7.整合fastjson
+8.自定义servlet
+9.自定义filter
+10.自定义listener
+11.自定义interceptor
+12.配置AOP使用
+13.公共错误页面，5xx或404
+14.通用异常处理逻辑
+15.通用文件上传下载
+16.跨域控制方法两种，使用注解或配置webconfig
+17.整合websockt
