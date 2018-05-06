@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.dao.UserDao;
+import com.example.demo.entity.Department;
 import com.example.demo.entity.User;
+import com.example.demo.mapper.DepartmentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,6 +22,9 @@ public class FastjsonController {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private DepartmentMapper departmentMapper;
+
     @RequestMapping("/test")
     @ResponseBody
     @CrossOrigin(origins="http://localhost:8088")//跨域控制方法
@@ -31,9 +36,14 @@ public class FastjsonController {
         user.setPassword("jack123");
         user.setBirthday(new Date());
 
+//        int result = this.userDao.insert(user);
+//        System.out.println(result);
 
-        int result = this.userDao.insert(user);
-        System.out.println(result);
+        Department department = new Department();
+        department.setId(1);
+        department.setName("65767");
+        department.setDescr("99878879");
+        this.departmentMapper.insert(department);
 
         return user;
     }
